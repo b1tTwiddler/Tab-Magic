@@ -1,0 +1,11 @@
+{
+	"manifest_version": 3,
+	"name": "chrome Extension starter",
+	"version": "1.0",
+	"permissions": ["tabs", "activeTab", "storage", "bookmarks"],
+	"action": {
+		"default_title": "My Extension",
+		"default_icon": {},
+		"default_popup": "popup.html"
+	}
+}
