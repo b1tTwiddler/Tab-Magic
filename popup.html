@@ -7,9 +7,15 @@
     <title>chrome extension starter</title>
   </head>
 
-  <body>
+  <body class="max-w-xl w-[32rem]">
     <div id="app"></div>
-    <h3 class="bg-lime-600">Current Tabs</h3>
+    <h3 class="bg-red-400 p-4 text-neutral-700 text-center">Current Tabs</h3>
+    <div id="button-section" class="flex justify-around">
+      <input type="button" value="Bookmark Tabs" id="bookmark-tabs"
+        class="p-3 my-4 rounded-lg w-40 text-center text-white bg-blue-600">
+      <input type="button" value="Reload Tabs" id="reload-tabs"
+        class="p-3 my-4 rounded-lg w-40 text-center text-white bg-blue-600">
+    </div>
     <ul id="tabList"></ul>
     <script type="module" src="/src/popup.ts"></script>
   </body>
