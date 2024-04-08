@@ -1,20 +1,12 @@
 import "./style.css";
-interface tabData {
-  title?: string;
-  url?: string;
-}
-
 function createObjectFromTabsData(tabs: chrome.tabs.Tab[]) {
-  const hostNames: Record<string, tabData[]> = {};
+  const hostNames: Record<string, chrome.tabs.Tab[]> = {};
   for (let i = 0; i < tabs.length; i++) {
     let hostName = getHostname(tabs[i].url);
     if (!(hostName in hostNames)) {
       hostNames[hostName] = [];
     }
-    hostNames[hostName].push({
-      title: tabs[i].title,
-      url: tabs[i].url,
-    });
+    hostNames[hostName].push(tabs[i]);
     // hostNames.add(getHostname(tabs[i].url));
   }
   return hostNames;
